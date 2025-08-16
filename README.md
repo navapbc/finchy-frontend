@@ -1,4 +1,4 @@
-# Finchy - NJ UI Modernization Chatbot
+# Finchy - NJ UI Modernization Assistant
 
 A modern, responsive frontend application for a RAG (Retrieval-Augmented Generation) LLM system focused on NJ UI modernization, with integrated feedback collection and US Web Design System (USWDS) compliance.
 
