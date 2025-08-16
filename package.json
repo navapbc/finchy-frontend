@@ -2,7 +2,7 @@
   "name": "finchy-nj-ui-modernization",
   "version": "1.0.0",
   "description": "Finchy - NJ UI Modernization Assistant powered by AI with feedback system",
-  "homepage": "https://billyhunt.github.io/finchy-frontend",
+  "homepage": "https://navapbc.github.io/finchy-frontend",
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
