@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/finchy-frontend/static/css/main.b37f68e4.css",
-    "main.js": "/finchy-frontend/static/js/main.7893f0ba.js",
+    "main.css": "/finchy-frontend/static/css/main.713e4678.css",
+    "main.js": "/finchy-frontend/static/js/main.00839332.js",
     "index.html": "/finchy-frontend/index.html",
-    "main.b37f68e4.css.map": "/finchy-frontend/static/css/main.b37f68e4.css.map",
-    "main.7893f0ba.js.map": "/finchy-frontend/static/js/main.7893f0ba.js.map"
+    "main.713e4678.css.map": "/finchy-frontend/static/css/main.713e4678.css.map",
+    "main.00839332.js.map": "/finchy-frontend/static/js/main.00839332.js.map"
   },
   "entrypoints": [
-    "static/css/main.b37f68e4.css",
-    "static/js/main.7893f0ba.js"
+    "static/css/main.713e4678.css",
+    "static/js/main.00839332.js"
   ]
 }

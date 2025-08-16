@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { X, LogIn, Eye, EyeOff, AlertCircle, CheckCircle } from "lucide-react";
-import GoldfinchIcon from "./GoldfinchIcon";
+import FinchyIcon from "./FinchyIcon";
 
 const LoginModal = ({
   onClose,
@@ -70,7 +70,7 @@ const LoginModal = ({
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-secondary-200">
           <div className="flex items-center space-x-3">
-            <GoldfinchIcon className="w-8 h-8 text-yellow-500" />
+            <FinchyIcon className="w-8 h-8 text-yellow-500" />
             <div>
               <h3 className="text-xl font-semibold text-primary-900 font-serif">
                 Welcome to Finchy

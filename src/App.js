@@ -3,7 +3,7 @@ import ChatInterface from "./components/ChatInterface";
 import FeedbackModal from "./components/FeedbackModal";
 import Header from "./components/Header";
 import LoginModal from "./components/LoginModal";
-import GoldfinchIcon from "./components/GoldfinchIcon";
+import FinchyIcon from "./components/FinchyIcon";
 import { LogIn } from "lucide-react";
 import { mockLLMResponse } from "./utils/mockData";
 import mockAuthService from "./services/mockAuthService";
@@ -208,7 +208,7 @@ function App() {
         ) : (
           <div className="text-center py-20">
             <div className="max-w-md mx-auto">
-              <GoldfinchIcon className="w-24 h-24 mx-auto mb-6 text-yellow-400" />
+              <FinchyIcon className="w-24 h-24 mx-auto mb-6 text-yellow-400" />
               <h2 className="text-3xl font-bold text-secondary-900 mb-4 font-serif">
                 Welcome to Finchy
               </h2>

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import MessageBubble from "./MessageBubble";
 import FeedbackButtons from "./FeedbackButtons";
-import GoldfinchIcon from "./GoldfinchIcon";
+import FinchyIcon from "./FinchyIcon";
 import { Send, User } from "lucide-react";
 
 const ChatInterface = ({
@@ -42,7 +42,7 @@ const ChatInterface = ({
       {/* Chat Header */}
       <div className="bg-primary-600 text-white px-6 py-4">
         <div className="flex items-center space-x-3">
-          <GoldfinchIcon className="w-6 h-6 text-yellow-300" />
+          <FinchyIcon className="w-6 h-6 text-yellow-300" />
           <h2 className="text-xl font-semibold font-serif">
             Finchy - NJ UI Modernization Assistant
           </h2>
@@ -53,7 +53,7 @@ const ChatInterface = ({
       <div className="h-96 overflow-y-auto p-6 space-y-4">
         {conversations.length === 0 ? (
           <div className="text-center text-secondary-500 py-12">
-            <GoldfinchIcon className="w-16 h-16 mx-auto mb-6 text-yellow-400" />
+            <FinchyIcon className="w-16 h-16 mx-auto mb-6 text-yellow-400" />
             <p className="text-xl font-semibold text-secondary-700 mb-2">
               Start a conversation about NJ UI modernization!
             </p>
@@ -88,7 +88,7 @@ const ChatInterface = ({
                 <div className="max-w-xs lg:max-w-md">
                   <div className="bg-secondary-50 text-secondary-900 rounded-lg px-4 py-3 border border-secondary-200">
                     <div className="flex items-center space-x-2 mb-2">
-                      <GoldfinchIcon className="w-4 h-4 text-yellow-500" />
+                      <FinchyIcon className="w-4 h-4 text-yellow-500" />
                       <span className="text-xs font-semibold text-secondary-700">
                         Finchy
                       </span>
@@ -141,7 +141,7 @@ const ChatInterface = ({
             <div className="max-w-xs lg:max-w-md">
               <div className="bg-secondary-50 text-secondary-900 rounded-lg px-4 py-3 border border-secondary-200">
                 <div className="flex items-center space-x-2 mb-2">
-                  <GoldfinchIcon className="w-4 h-4 text-yellow-500" />
+                  <FinchyIcon className="w-4 h-4 text-yellow-500" />
                   <span className="text-xs font-semibold text-secondary-700">
                     Finchy
                   </span>

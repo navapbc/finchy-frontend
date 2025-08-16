@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { LogIn, LogOut, User, Menu, X } from "lucide-react";
-import GoldfinchIcon from "./GoldfinchIcon";
+import FinchyIcon from "./FinchyIcon";
 
 const Header = ({ isAuthenticated, onLogin, onLogout, user }) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -21,7 +21,7 @@ const Header = ({ isAuthenticated, onLogin, onLogout, user }) => {
         <div className="flex items-center justify-between h-16">
           {/* Logo and Brand */}
           <div className="flex items-center space-x-3">
-            <GoldfinchIcon className="w-8 h-8 text-yellow-500" />
+            <FinchyIcon className="w-8 h-8 text-yellow-500" />
             <div className="hidden sm:block">
               <h1 className="text-xl font-bold text-primary-700 font-serif">
                 Finchy

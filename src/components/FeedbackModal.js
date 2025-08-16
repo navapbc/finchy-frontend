@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { X, AlertCircle } from "lucide-react";
-import GoldfinchIcon from "./GoldfinchIcon";
+import FinchyIcon from "./FinchyIcon";
 
 const FeedbackModal = ({ onClose, onSubmit, conversation }) => {
   const [feedbackText, setFeedbackText] = useState("");
@@ -70,7 +70,7 @@ const FeedbackModal = ({ onClose, onSubmit, conversation }) => {
             </div>
             <div>
               <h4 className="text-sm font-semibold text-secondary-900 mb-2 uppercase tracking-wide flex items-center">
-                <GoldfinchIcon className="w-4 h-4 text-yellow-500 mr-2" />
+                <FinchyIcon className="w-4 h-4 text-yellow-500 mr-2" />
                 Finchy's Response:
               </h4>
               <p className="text-sm text-secondary-700 bg-white p-3 rounded border border-secondary-200">
