@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { LogIn, LogOut, User, Menu, X } from "lucide-react";
 import FinchyIcon from "./FinchyIcon";
 
-const Header = ({ isAuthenticated, onLogin, onLogout, user }) => {
+const Header = ({ isAuthenticated, onLogin, onLogout, user, onViewChange, currentView }) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   const handleLogin = () => {
@@ -35,24 +35,26 @@ const Header = ({ isAuthenticated, onLogin, onLogout, user }) => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
             <nav className="flex items-center space-x-6">
-              <a
-                href="#features"
-                className="text-secondary-600 hover:text-primary-600 transition-colors font-medium"
+              <button
+                onClick={() => onViewChange("chat")}
+                className={`transition-colors font-medium ${
+                  currentView === "chat"
+                    ? "text-primary-600 border-b-2 border-primary-600 pb-1"
+                    : "text-secondary-600 hover:text-primary-600"
+                }`}
               >
-                Features
-              </a>
-              <a
-                href="#about"
-                className="text-secondary-600 hover:text-primary-600 transition-colors font-medium"
+                Chat
+              </button>
+              <button
+                onClick={() => onViewChange("pdfs")}
+                className={`transition-colors font-medium ${
+                  currentView === "pdfs"
+                    ? "text-primary-600 border-b-2 border-primary-600 pb-1"
+                    : "text-secondary-600 hover:text-primary-600"
+                }`}
               >
-                About
-              </a>
-              <a
-                href="#contact"
-                className="text-secondary-600 hover:text-primary-600 transition-colors font-medium"
-              >
-                Contact
-              </a>
+                PDFs
+              </button>
             </nav>
 
             {/* Authentication Section */}
@@ -104,24 +106,32 @@ const Header = ({ isAuthenticated, onLogin, onLogout, user }) => {
         {showMobileMenu && (
           <div className="md:hidden border-t border-secondary-200 py-4">
             <nav className="flex flex-col space-y-3 mb-4">
-              <a
-                href="#features"
-                className="text-secondary-600 hover:text-primary-600 transition-colors font-medium py-2"
+              <button
+                onClick={() => {
+                  onViewChange("chat");
+                  setShowMobileMenu(false);
+                }}
+                className={`transition-colors font-medium py-2 text-left ${
+                  currentView === "chat"
+                    ? "text-primary-600 bg-primary-50 border-l-4 border-primary-600 pl-3"
+                    : "text-secondary-600 hover:text-primary-600"
+                }`}
               >
-                Features
-              </a>
-              <a
-                href="#about"
-                className="text-secondary-600 hover:text-primary-600 transition-colors font-medium py-2"
+                Chat
+              </button>
+              <button
+                onClick={() => {
+                  onViewChange("pdfs");
+                  setShowMobileMenu(false);
+                }}
+                className={`transition-colors font-medium py-2 text-left ${
+                  currentView === "pdfs"
+                    ? "text-primary-600 bg-primary-50 border-l-4 border-primary-600 pl-3"
+                    : "text-secondary-600 hover:text-primary-600"
+                }`}
               >
-                About
-              </a>
-              <a
-                href="#contact"
-                className="text-secondary-600 hover:text-primary-600 transition-colors font-medium py-2"
-              >
-                Contact
-              </a>
+                PDFs
+              </button>
             </nav>
 
             {/* Mobile Authentication */}
