@@ -4,6 +4,7 @@ import FeedbackModal from "./components/FeedbackModal";
 import Header from "./components/Header";
 import LoginModal from "./components/LoginModal";
 import FinchyIcon from "./components/FinchyIcon";
+import PDFViewer from "./components/PDFViewer";
 import { LogIn } from "lucide-react";
 import { mockLLMResponse } from "./utils/mockData";
 import mockAuthService from "./services/mockAuthService";
@@ -16,6 +17,7 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState(null);
   const [showLoginModal, setShowLoginModal] = useState(false);
+  const [currentView, setCurrentView] = useState("chat");
 
   // Initialize authentication on component mount
   useEffect(() => {
@@ -185,17 +187,24 @@ function App() {
         user={user}
         onLogin={() => setShowLoginModal(true)}
         onLogout={handleLogout}
+        onViewChange={setCurrentView}
+        currentView={currentView}
       />
 
       <div className="max-w-6xl mx-auto p-6">
         {isAuthenticated ? (
           <>
-            <ChatInterface
-              conversations={conversations}
-              onSendMessage={handleSendMessage}
-              onFeedback={handleFeedback}
-              isLoading={isLoading}
-            />
+            {currentView === "chat" ? (
+              <ChatInterface
+                conversations={conversations}
+                onSendMessage={handleSendMessage}
+                onFeedback={handleFeedback}
+                isLoading={isLoading}
+                onViewPDFs={() => setCurrentView("pdfs")}
+              />
+            ) : (
+              <PDFViewer />
+            )}
 
             {showFeedbackModal && (
               <FeedbackModal

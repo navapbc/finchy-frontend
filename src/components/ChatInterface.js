@@ -9,6 +9,7 @@ const ChatInterface = ({
   onSendMessage,
   onFeedback,
   isLoading,
+  onViewPDFs,
 }) => {
   const [inputMessage, setInputMessage] = useState("");
   const messagesEndRef = useRef(null);
@@ -93,7 +94,7 @@ const ChatInterface = ({
                         Finchy
                       </span>
                     </div>
-                    <MessageBubble content={conversation.answer} />
+                    <MessageBubble content={conversation.answer} onViewPDFs={onViewPDFs} />
                   </div>
 
                   {/* Feedback Buttons */}
